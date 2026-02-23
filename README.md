@@ -6,7 +6,7 @@
 
 This repository contains the official implementation of **PETCalibrator**, a geometric consistency-guided de-bias learning framework designed for precise and efficient image-based Positron Emission Tomography (PET) detector calibration.
 
-> **News:** Our paper has been submitted/accepted to *Medical Image Analysis*.
+> **News:** Our paper has been submitted to *Medical Image Analysis*.
 
 ---
 
