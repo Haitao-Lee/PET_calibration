@@ -29,9 +29,9 @@ The pipeline consists of three primary stages:
 ![Workflow of the GGDM](static/GGDM.png)
 *(Please place your `GGDM.png` here to illustrate the 3D topographic surface and the gradient-guided shift process.)*
 
-![Quantititive comparison of different models](static/Comparison1.png)
+![Quantititive comparison of different models](static/reliability.png)
 
-![Qualitative comparison of different models](static/Comparison2.png)
+![Qualitative comparison of different models](static/Comparison.png)
 *(Please place your `GGDM.png` here to illustrate the 3D topographic surface and the gradient-guided shift process.)*
 
 ## 🛠️ Installation
