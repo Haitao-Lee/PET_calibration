@@ -42,28 +42,19 @@ Applies a Voronoi diagram-based linear clustering strategy to establish accurate
 
 ## 📊 Comparison Methods
 
-To rigorously evaluate the superiority of PETCalibrator in signal peak localization, we conduct extensive comparisons against recent state-of-the-art architectures across three representative paradigms.
-
-### 🔵 Convolutional Neural Networks (CNNs)
-
+To rigorously evaluate the superiority of PETCalibrator in signal peak localization, we conduct extensive comparisons against recent state-of-the-art architectures, including.
 - **ConvNeXtV2** (CVPR 2023)  
 - **nnUNet** (Nature Methods 2021)  
 - **SCTNet** (AAAI 2024)  
 - **Focal Modulation Networks (FocalNet)** (NeurIPS 2022)  
 - **ConDSeg** (AAAI 2025)  
 - **UNet3Plus** (ICASSP 2020)  
-
-### 🟣 Transformer-based Models
-
 - **nnFormer** (IEEE TIP 2023)  
 - **Integrally Transformer Pyramid Networks (iTPN)** (CVPR 2023)  
 - **Vision Transformer (ViT)** (ICLR 2020)  
 - **Swin Transformer V2 (SwinV2)** (CVPR 2022)  
 - **UNETR++** (IEEE TMI 2024)  
 - **TransUNet** (Medical Image Analysis 2024)  
-
-### 🟢 Mamba-based State-Space Models
-
 - **MobileMamba** (arXiv 2024)  
 - **VMamba** (NeurIPS 2024)  
 - **Vision Mamba** (ICML 2024)  
