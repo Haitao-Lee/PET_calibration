@@ -83,7 +83,7 @@ To ensure strict fairness:
 
 ### Qualitative Comparison
 
-![Qualitative comparison of different models](static/Comparison.png)
+![Qualitative comparison of different models](static/comparison.png)
 
 Extensive experiments demonstrate that PETCalibrator consistently achieves superior localization accuracy and improved structural consistency compared with strong CNN, Transformer, and Mamba baselines.
 
