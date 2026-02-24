@@ -43,14 +43,12 @@ Applies a Voronoi diagram-based linear clustering strategy to establish accurate
 
 ```text
 PET_calibration/
+├── ckpts/
 ├── models/
-│   ├── GCDLNet.py       # Core network (includes AHFM, MMFM, GGDM)
-│   └── mean_model.pth   # Pre-computed mean topological prior model
+├── utils/
 ├── static/              # Images for README
-├── configs/             # Hyperparameter configurations (config.py)
-├── data_set.py          # Custom PyTorch Dataset for loading flood maps
+├── configs
 ├── train.py             # Main training script with Early Stopping
-├── infer.py             # Inference script for visualization and LUT prep
 ├── environment.yml      # Conda environment dependencies
 └── README.md
 ```
