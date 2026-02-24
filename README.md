@@ -18,7 +18,7 @@ However, precise signal peak localization within visually complex and inherently
 
 ## ⚙️ Framework Overview
 
-![Overview of the PETCalibrator Framework](Fig/overview.png)
+![Overview of the PETCalibrator Framework](static/overview.png)
 *(Please place your `overview.png` here. The image should illustrate the three main stages of the proposed pipeline.)*
 
 The pipeline consists of three primary stages:
@@ -26,7 +26,12 @@ The pipeline consists of three primary stages:
 2. **Geometric Consistency-Guided Peak Localization:** Leverages the **Gradient-Guided De-biasing Module (GGDM)** to actively correct continuous spatial label biases.
 3. **Pixel-wise Image Regridding:** Utilizes an efficient Voronoi diagram-based linear clustering strategy to establish accurate correspondences between pixel-level responses and crystal-level channels, generating the refined Look-Up Table (LUT).
 
-![Workflow of the GGDM](Fig/GGDM.png)
+![Workflow of the GGDM](static/GGDM.png)
+*(Please place your `GGDM.png` here to illustrate the 3D topographic surface and the gradient-guided shift process.)*
+
+![Quantititive comparison of different models](static/Comparison1.png)
+
+![Qualitative comparison of different models](static/Comparison2.png)
 *(Please place your `GGDM.png` here to illustrate the 3D topographic surface and the gradient-guided shift process.)*
 
 ## 🛠️ Installation
