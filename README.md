@@ -10,8 +10,6 @@
 > Haitao Li, Weiping Liu, Jiangchang Xu, Zhelong Wang, Xiaojun Chen
 > *Information Fusion*, Elsevier, 2026 (under review).
 
-The codebase has been refreshed from its earlier *Medical Image Analysis* preprint version; everything below matches the *Information Fusion* manuscript.
-
 ---
 
 ## 📖 Introduction
