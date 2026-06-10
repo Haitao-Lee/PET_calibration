@@ -1,13 +1,16 @@
-# PETCalibrator: Geometric Context Fusion De-bias Learning for Resilient Image-Based PET Detector Calibration
+# PETCalibrator: A Geometric Context Fusion De-bias Learning Framework for Resilient Positron Emission Tomography Detector Calibration
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)](https://pytorch.org/)
 
-Official PyTorch implementation of **PETCalibrator** and its core network **DeLocNet**, a geometric context fusion de-bias learning framework for precise and efficient image-based Positron Emission Tomography (PET) detector calibration.
+Official PyTorch implementation of **PETCalibrator** and its core network **DeLocNet**, accompanying the paper:
 
-> **News:** Our paper has been submitted to *Information Fusion* (Elsevier, 2026).
-> The earlier preprint version of this codebase corresponded to a *Medical Image Analysis* submission; the current code matches the *Information Fusion* manuscript.
+> **A Geometric Context Fusion De-bias Learning Framework for Resilient Positron Emission Tomography Detector Calibration**
+> Haitao Li, Weiping Liu, Jiangchang Xu, Zhelong Wang, Xiaojun Chen
+> *Information Fusion*, Elsevier, 2026 (under review).
+
+The codebase has been refreshed from its earlier *Medical Image Analysis* preprint version; everything below matches the *Information Fusion* manuscript.
 
 ---
 
