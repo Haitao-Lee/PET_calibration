@@ -855,21 +855,28 @@ class Compressor(nn.Module):
         return self.model(x)
 
 
-class LocalizationNetwork(nn.Module):
-    def __init__(self, 
-                 mean_model, 
-                 filter_rate=1, 
+class DeLocNet(nn.Module):
+    """DeLocNet: Geometric Context Fusion De-Bias Localization Network.
+
+    Reference: Li et al., "A Geometric Context Fusion De-bias Learning
+    Framework for Resilient Positron Emission Tomography Detector
+    Calibration", Information Fusion, 2026.
+    """
+
+    def __init__(self,
+                 mean_model,
+                 filter_rate=1,
                  img_size=(256, 256),
                  feat_size=[64, 128, 256, 512],
                  point_distance_threshold=4,
                  error_threshold=20**2,
                  AHFM_sign=True,
                  MMFM_sign=True,
-                 GGDM_sign=True,      
+                 GGDM_sign=True,
                  smooth_sign=True,
                  process_sign=True,
                  ):
-        super(LocalizationNetwork, self).__init__()
+        super(DeLocNet, self).__init__()
         self.AHFM_sign = AHFM_sign
         self.MMFM_sign = MMFM_sign
         self.GGDM_sign = GGDM_sign
@@ -914,7 +921,12 @@ class LocalizationNetwork(nn.Module):
         return out.reshape(-1, 1, 512)
         
         
-def GCDLNet(mean_model_path):
+def build_DeLocNet(mean_model_path):
+    """Factory function: build a DeLocNet from a saved mean-model tensor file."""
     mean_model = torch.load(mean_model_path)
-    model = LocalizationNetwork(mean_model)
+    model = DeLocNet(mean_model)
     return model
+
+
+# Backward-compatible alias for the old GCDLNet factory name.
+GCDLNet = build_DeLocNet

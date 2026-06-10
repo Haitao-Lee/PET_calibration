@@ -9,10 +9,10 @@ import torch
 import torch.optim as optim
 from torch.utils.data import DataLoader
 
-from untils.initialize import *
+from utils.initialize import *
 from config import args
-import untils.data_set as data_set
-import models.GCDLNet
+import utils.data_set as data_set
+import models.DeLocNet
 
 os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 os.environ['PYTORCH_CUDA_ALLOC_CONF'] = ''
@@ -48,7 +48,7 @@ class EarlyStopping:
             return 
         
         os.makedirs(path, exist_ok=True)
-        torch.save(model.state_dict(), os.path.join(path, 'GCDLNet_latest.pth'))
+        torch.save(model.state_dict(), os.path.join(path, 'DeLocNet_latest.pth'))
         
         if self.best_score is None:
             self.best_score = score
@@ -66,7 +66,7 @@ class EarlyStopping:
     def save_checkpoint(self, val_loss, model, path):
         if self.verbose:
             print(f"Validation loss decreased ({self.val_loss_min:.6f} --> {val_loss:.6f}). Saving model ...")
-        torch.save(model.state_dict(), os.path.join(path, 'GCDLNet_best.pth'))
+        torch.save(model.state_dict(), os.path.join(path, 'DeLocNet_best.pth'))
         self.val_loss_min = val_loss
 
 
@@ -74,7 +74,7 @@ def main():
     device = args.device
     print(f"Current working directory: {os.getcwd()}")
     
-    log_path = os.path.abspath('./models/GCDLNet.log')
+    log_path = os.path.abspath('./models/DeLocNet.log')
     print(f"Log path: {log_path}")
     logger = setup_logger(log_path)
 
@@ -91,9 +91,9 @@ def main():
     
     print(f"Dataset size: {len(train_dataset)}")
     
-    net = models.GCDLNet.GCDLNet(os.path.join(args.save_model, "mean_model.pth")).to(device)
-    
-    latest_model_path = os.path.join(args.save_model, 'GCDLNet_latest.pth')
+    net = models.DeLocNet.build_DeLocNet(os.path.join(args.save_model, "mean_model.pth")).to(device)
+
+    latest_model_path = os.path.join(args.save_model, 'DeLocNet_latest.pth')
     if os.path.exists(latest_model_path):
         state_dict = torch.load(latest_model_path, map_location=device)
         net.load_state_dict(state_dict, strict=True)
